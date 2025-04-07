@@ -49,9 +49,9 @@ int main() {
         int v = valores[i];
         no* resultado = buscar(raiz, v);
         if (resultado != NULL)
-            printf("Valor %d encontrado na árvore.\n", v);
+            printf("Valor %d está na árvore.\n", v);
         else
-            printf("Valor %d NÃO encontrado na árvore.\n", v);
+            printf("Valor %d não está na árvore.\n", v);
     }
 
     return 0;
