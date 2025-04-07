@@ -94,10 +94,10 @@ void menu() {
     int opcao, valor;
 
     do {
-        printf("\n====== MENU ÁRVORE BINÁRIA DE BUSCA ======\n");
-        printf("1 - Inserir Valor\n");
-        printf("2 - Remover Valor\n");
-        printf("3 - Buscar Valor\n");
+        printf("\n Menu de busca na árvore binária ======\n");
+        printf("1 - Inserir Número\n");
+        printf("2 - Remover Número\n");
+        printf("3 - Buscar Número\n");
         printf("4 - Exibir em Ordem\n");
         printf("0 - Sair\n");
         printf("Escolha uma opção: ");
@@ -105,7 +105,7 @@ void menu() {
 
         switch (opcao) {
             case 1:
-                printf("Digite o valor a inserir: ");
+                printf("Digite o número a inserir: ");
                 scanf("%d", &valor);
                 raiz = inserir(raiz, valor);
                 break;
@@ -113,7 +113,7 @@ void menu() {
                 if (raiz == NULL) {
                     printf("A árvore está vazia.\n");
                 } else {
-                    printf("Digite o valor a remover: ");
+                    printf("Digite o número a remover: ");
                     scanf("%d", &valor);
                     raiz = remover(raiz, valor);
                 }
@@ -122,13 +122,13 @@ void menu() {
                 if (raiz == NULL) {
                     printf("A árvore está vazia.\n");
                 } else {
-                    printf("Digite o valor a buscar: ");
+                    printf("Digite o número a buscar: ");
                     scanf("%d", &valor);
                     no* encontrado = buscar(raiz, valor);
                     if (encontrado != NULL) {
-                        printf("Valor %d encontrado na árvore.\n", valor);
+                        printf("Número %d encontrado na árvore.\n", valor);
                     } else {
-                        printf("Valor %d não encontrado.\n", valor);
+                        printf("Número %d não encontrado.\n", valor);
                     }
                 }
                 break;
@@ -136,7 +136,7 @@ void menu() {
                 if (raiz == NULL) {
                     printf("A árvore está vazia.\n");
                 } else {
-                    printf("Elementos em ordem: ");
+                    printf("Valores em ordem: ");
                     emOrdem(raiz);
                     printf("\n");
                 }
